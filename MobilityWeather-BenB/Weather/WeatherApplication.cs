@@ -110,12 +110,12 @@ namespace MobilityWeather_BenB.Weather
             var citySearch = new CitySearch();
 
             _output.PrintSearchPrompt();
-            citySearch.City = Console.ReadLine();
+            citySearch.City = Unicode.Readline();
 
             if (advancedSearch)
             {
                 _output.PrintAdvancedSearchPrompt();
-                citySearch.ExtraQuery = Console.ReadLine();
+                citySearch.ExtraQuery = Unicode.Readline();
             }
 
             _output.PrintSearchingInProgress();

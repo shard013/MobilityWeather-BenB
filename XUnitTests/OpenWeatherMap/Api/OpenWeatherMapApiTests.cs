@@ -42,6 +42,7 @@ namespace XUnitTests.OpenWeatherMap.Api
         [InlineData("Perth", null, "https://api.openweathermap.org/data/2.5/weather?q=Perth&appid=1234&units=metric")]
         [InlineData("Perth", "Uk", "https://api.openweathermap.org/data/2.5/weather?q=Perth%2cUk&appid=1234&units=metric")]
         [InlineData("Sydney", null, "https://api.openweathermap.org/data/2.5/weather?q=Sydney&appid=1234&units=metric")]
+        [InlineData("القاهرة", null, "https://api.openweathermap.org/data/2.5/weather?q=%d8%a7%d9%84%d9%82%d8%a7%d9%87%d8%b1%d8%a9&appid=1234&units=metric")]
         public void RequestedSearchCityUriCorrect(string cityName, string extraQuery, string expectedUrl)
         {
             var weatherConfig = GetDefaultWeatherConfig();
