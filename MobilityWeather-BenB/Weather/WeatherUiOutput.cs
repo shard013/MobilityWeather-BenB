@@ -97,5 +97,15 @@ namespace MobilityWeather_BenB.Weather
             Console.WriteLine($"");
             Console.WriteLine($"Press any key to return to the main menu");
         }
+
+        public void PrintInvalidApiKey(string providerName)
+        {
+            Console.WriteLine($" *** There was an issue with the API key for {providerName}. ***");
+            Console.WriteLine($"");
+            Console.WriteLine($" *** Please check the appsettings.json config file. ***");
+            Console.WriteLine($"");
+            Console.WriteLine($"This program will now close");
+        }
+
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using Weather.Config;
 using Weather.Interfaces;
 using Weather.Models;
+using Weather.Network;
 
 namespace MobilityWeather_BenB.Weather
 {
@@ -27,7 +28,16 @@ namespace MobilityWeather_BenB.Weather
 
         public void Run()
         {
-            MainMenuLoop();
+            try
+            {
+                MainMenuLoop();
+            }
+            catch (ApiKeyException)
+            {
+                _output.PrintInvalidApiKey(_weatherConfig.ActiveWeatherApi);
+                Console.ReadKey();
+            }
+            
         }
 
         void SetHistoryPath()
