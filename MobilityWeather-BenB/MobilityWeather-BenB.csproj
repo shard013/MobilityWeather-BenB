@@ -6,7 +6,6 @@
     <RootNamespace>MobilityWeather_BenB</RootNamespace>
     <UserSecretsId>e251402a-3572-4da4-9742-b6b731068dd0</UserSecretsId>
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
-    <PublishSingleFile>true</PublishSingleFile>
     <PublishTrimmed>true</PublishTrimmed>
   </PropertyGroup>
 
