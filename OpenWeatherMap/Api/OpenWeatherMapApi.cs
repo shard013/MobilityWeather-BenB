@@ -17,6 +17,7 @@ namespace OpenWeatherMap.Api
         const string UnitDisplayTemperature = "C";
         const string CityFoundCode = "200";
 
+        //Placeholders to use in replaces when generating URIs
         const string PhQuery = "{query}";
         const string PhCityKey = "{cityKey}";
         const string PhApiKey = "{apiKey}";

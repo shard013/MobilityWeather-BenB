@@ -13,6 +13,7 @@ namespace AccuWeather.Api
     {
         public const string ConfigIdentifier = "AccuWeather";
 
+        //Placeholders to use in replaces when generating URIs
         const string PhQuery = "{query}";
         const string PhCityKey = "{cityKey}";
         const string PhApiKey = "{apiKey}";
@@ -61,8 +62,8 @@ namespace AccuWeather.Api
             }
 
             var requestUri = $"{Config.ApiBase}{SearchCityByQueryEndpoint}"
-                .Replace("{apiKey}", Config.ApiKey)
-                .Replace("{query}", HttpUtility.UrlEncode(queryString));
+                .Replace(PhApiKey, Config.ApiKey)
+                .Replace(PhQuery, HttpUtility.UrlEncode(queryString));
 
             return requestUri;
         }
